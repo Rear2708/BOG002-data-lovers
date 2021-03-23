@@ -5,7 +5,23 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+body{
+    width: 100%;
+    height: 100vh;
+    background-image:url(/images/pokemon-wallpaper-3.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+body main #bienvenido h1{
+    font-family: 'Thasadith', sans-serif;
+    font-size: 70px;
+    font-weight: bolder;
+    margin-top: 60px;
+    color: black;
+    margin-left: 40%;
+    width: 380px;
+}
 .menuSearch {
     position: absolute;
     left: 5%;
