@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Thasadith&display=swap');
+*{
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.menuSearch {
+    position: absolute;
+    left: 5%;
+    top: 100px;
+    
+}
+.menuSearch li{
+    width: 20%;
+    margin: 10px;
+    display: flex;
+    list-style: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.menuSearch li:hover{
+    transform: translateX(20px);
+}
+ li img{
+     width: 60px;
+     height: 60px;
+}
+
+
+@media screen and (max-width: 380px){
+    header{
+        width: 380px;
+    }
+    header #menu{
+        width: 100px;
+        height: 100px;
+        margin-top: 350px;
+        margin-left: 30%;
+        position:fixed;
+    }
+    header #menu img{
+        width: 100%;
+        height: 100%;
+
+    }
+    body{
+        width: 380px;
+        height: 500px;
+        background-image:url(/images/a36106f5c9db1aaa5a29149854f4975f.jpg);
+        background-repeat: no-repeat;
+        background-size:cover;
+    }
+    body main #bienvenido{
+        display:flex;
+        align-content: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        width: 380px;
+    }
+    body main #bienvenido h1{
+        font-family: 'Thasadith', sans-serif;
+        font-size: 30px;
+        font-weight: lighter;
+        margin-top: 60px;
+        color: aliceblue;
+        margin-left: 30%;
+        width: 380px;
+    }
+    body main #bienvenido img{
+        margin-top: 10px;
+        width: 230px;
+        margin-left: 20%;
+    }
+    body main #infoBienvenida{
+        background-color:rgba(221, 223, 216, 0.7); 
+        width: 200px;
+        height: 140px;
+        margin-left: 25%;
+        margin-top: 20px;
+        border-radius: 20px;
+        box-shadow: 8px 10px black;
+    }
+    body main #infoBienvenida h3{
+        text-align: center;
+        font-size: 16px;
+        padding-top: 15px;
+        padding-left: 8px;
+        padding-right: 8px;
+
+    }
+    body main #infoBienvenida img{
+        border-radius: 80px;
+        width: 50px;
+        height: 50px;
+        margin-left: 80px;
+    }
+    footer{
+        width: 380px;
+        background-color:rgba(221, 223, 216, 1);
+        margin-top: 90%;
+    }
+    footer p{
+        font-family:'Thasadith', sans-serif;
+        color: black;
+        font-size: 15px;
+        font-weight: 800;
+        text-align: center;
+    }
+}
