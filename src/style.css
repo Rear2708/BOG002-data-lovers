@@ -1,26 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Thasadith&display=swap');
 *{
-    border: 0;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    
 }
 body{
     width: 100%;
     height: 100vh;
-    background-image:url(/images/pokemon-wallpaper-3.jpg);
+    background-image: url(../images/home.png);
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
 }
 body main #bienvenido h1{
     font-family: 'Thasadith', sans-serif;
-    font-size: 70px;
+    font-size: 30px;
     font-weight: bolder;
-    margin-top: 60px;
     color: black;
-    margin-left: 40%;
-    width: 380px;
+}
+main{
+    position: absolute;
+    top: 10%;
+    left: 30%;
+}
+main img{
+    position: relative;
+    left: 20%;
+}
+ main #infoBienvenida h3{
+    position: relative;
+    top: 250px;
+    left: 0;
 }
 .menuSearch {
     position: absolute;
@@ -42,8 +53,34 @@ body main #bienvenido h1{
  li img{
      width: 60px;
      height: 60px;
+     position: relative;
+     top: 50px;
+     
+}
+ul{
+    visibility: hidden;
+}
+nav #menu{
+    
+    width: 150px;
+    height: 150px;
+    transition: 0.5s;
+}
+ nav #menu:hover{
+    transform: translateY(20px);
 }
 
+#flecha{
+    visibility: hidden;
+}
+footer{
+    margin: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    text-align: center;
+
+}
 
 @media screen and (max-width: 380px){
     header{
