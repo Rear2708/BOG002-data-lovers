@@ -1,10 +1,11 @@
 import pokemon from './data/pokemon/pokemon.js';
 import data from './data/pokemon/pokemon.js';
-import { forType } from "./data.js";
+import { listType, filterType } from "./data.js";
 
 
-const arrPokemon = data.pokemon;
-console.log(forType(arrPokemon));
+const dataPokemon = data.pokemon;
+console.log(filterType('poison',dataPokemon));
+console.log(listType(dataPokemon));
 
 const menu = document.getElementById('menu');
 const pokeTypeList = document.querySelector('ul');
@@ -31,9 +32,11 @@ typePokemon.addEventListener('mouseout',hiddenMesage);
    typePokemon.addEventListener('click',()=>{
        document.querySelector('main').innerHTML = "";
        newfondo.style.backgroundImage = "url(../images/531970.jpg)";
-       const containerType = document.createElement('div');
-       const lista = document.createTextNode(forType(arrPokemon));
+       const containerType = document.createElement('section');
+       const lista = document.createTextNode(listType(dataPokemon));
        containerType.appendChild(lista);
        document.body.appendChild(containerType);
+
+
 });
 

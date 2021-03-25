@@ -3,24 +3,21 @@
 //Una funcion que filtre los tipos de pokemon
 
 
-export const forType = (arrPokemon) => {
+export const listType = (Pokemons) => {
   let tiposPokemon = [];
   let todosLosTiposJuntos = [];
-  for (let i=0; i < arrPokemon.length; i++){
-        tiposPokemon = arrPokemon[i].type[0];
-        todosLosTiposJuntos = todosLosTiposJuntos + "\n" + tiposPokemon;
-    }
-    return todosLosTiposJuntos;
-}
-/*crear un condicional para separar por cada tipo
-condicional para los tipo poison del la variable todosLosTiposJuntos
-convertir todosLosTiposJuntos a un array 
-luego condicionar
-si  o switch/case [i] = poison
-crear variable numeros = arrPokemon.num;
-y los guarde dentro del li con id type1
+  for (let i=0; i < Pokemons.length; i++){
+        tiposPokemon = Pokemons[i].type[0];
+        todosLosTiposJuntos.push(tiposPokemon);
 
-*/
+       }
+    return [...new Set (todosLosTiposJuntos)];
+}
+export const filterType = (tipo, Pokemons) =>{
+  return Pokemons.filter(Pokemon => Pokemon.type[0] === tipo);
+
+}
+
 
 
 export const anotherExample = () => {
