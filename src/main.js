@@ -4,39 +4,53 @@ import { listType, filterType } from "./data.js";
 
 
 const dataPokemon = data.pokemon;
-console.log(filterType('poison',dataPokemon));
-console.log(listType(dataPokemon));
-
+const selectType = listType(dataPokemon);
 const menu = document.getElementById('menu');
-const pokeTypeList = document.querySelector('ul');
-const typePokemon = document.getElementById('type1');
-const mesage = document.createElement("span");
 const newfondo = document.querySelector('body');
 
 
-menu.addEventListener('click',()=>{pokeTypeList.style.visibility = "visible";});  
+menu.addEventListener('click',activePokeball);
+
+function activePokeball() {
+     const select = document.querySelector('main');
+      select.innerHTML = "";
+      newfondo.style.background = "white";
+
+      //RECORREMOS LA LISTA Y CREAMOS UNA TARJETA POR CADA UNO
+      selectType.forEach(item => {
+      const div = document.createElement('div');
+      const p = document.createElement('p');
+      p.textContent = item;
+      div.id = item;
+      document.querySelector('#list-tipos').appendChild(div).appendChild(p);
+      div.classList.add('div-shadow');
+
+      div.addEventListener('click',mostrarPorTipo);
+     
+     
+     });
+
+      
+      
+}
+function mostrarPorTipo(event){
+      
+      const tipo = event.currentTarget.id;
+      const arrayFiltrado = filterType(tipo,dataPokemon);
+      console.log(arrayFiltrado);
+     const select = document.querySelector('main');
+     select.innerHTML = "";
+     newfondo.style.background = "white";
+
+     
+
+}
+     
+       
+     
+     
 
 
-typePokemon.addEventListener('mouseover',function(){
-      mesage.innerHTML = "Buscar por tipo";
-      mesage.style.color = "black";
-      mesage.style.visibility = "visible";
-      document.getElementById('type1').appendChild(mesage);
-});
-
-typePokemon.addEventListener('mouseout',hiddenMesage);
-   function hiddenMesage(){
-    mesage.style.visibility = 'hidden';
-   }
-
-   typePokemon.addEventListener('click',()=>{
-       document.querySelector('main').innerHTML = "";
-       newfondo.style.backgroundImage = "url(../images/531970.jpg)";
-       const containerType = document.createElement('section');
-       const lista = document.createTextNode(listType(dataPokemon));
-       containerType.appendChild(lista);
-       document.body.appendChild(containerType);
 
 
-});
 

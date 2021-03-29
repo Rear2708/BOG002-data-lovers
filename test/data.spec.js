@@ -1,13 +1,31 @@
-import { example, anotherExample } from '../src/data.js';
+import { filterType, anotherExample } from '../src/data.js';
 
 
-describe('example', () => {
+describe('filterType', () => {
   it('is a function', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof filterType).toBe('function');
   });
 
   it('returns `example`', () => {
-    expect(example()).toBe('example');
+    const arrayData = [{
+      name: "ponyta",
+      type: "fire",
+    },
+    {
+      name: "Gimena",
+      type: "water"
+
+    }]
+    const arrayResultado = [{
+      name: "ponyta",
+      type: "fire"
+    },
+    {
+      name: "Gimena",
+      type: "water"
+
+    }]
+    expect(filterType(arrayData)).toEqual(arrayResultado);
   });
 });
 

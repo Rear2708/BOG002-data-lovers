@@ -13,7 +13,7 @@ export const listType = (Pokemons) => {
        }
     return [...new Set (todosLosTiposJuntos)];
 }
-export const filterType = (tipo, Pokemons) =>{
+export const filterType = (tipo, Pokemons) => {
   return Pokemons.filter(Pokemon => Pokemon.type[0] === tipo);
 
 }
