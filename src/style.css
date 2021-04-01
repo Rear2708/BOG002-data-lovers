@@ -8,7 +8,7 @@
 body{
     width: 100%;
     height: 100vh;
-    background-image: url(../images/home.png);
+    background-image: url(../images/14729.jpg);
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
@@ -23,6 +23,12 @@ main{
     position: absolute;
     top: 10%;
     left: 30%;
+    background: rgba( 159, 20, 134, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 8.5px );
+-webkit-backdrop-filter: blur( 8.5px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 main img{
     position: relative;
@@ -54,30 +60,41 @@ nav #menu{
 }
 footer{
     margin: 10px;
+    display: flex;
     position: absolute;
     bottom: 0;
-    left: 40%;
     text-align: center;
 
 }
 .div-shadow{
-    width: 100px;
+    width: 20%;
     height: 100px;
     box-shadow: 5px 5px 5px;
     margin: 0 1em 1em 0;
     padding: 40px;
-    position absolute;
+    position:relative;
     display: inline-block;
-
+    background: rgba( 80, 227, 194, 0.45 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 11.0px );
+    -webkit-backdrop-filter: blur( 11.0px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 .card-pokemon{
-    width: 100px;
-    height: 100px;
+    width: 300px;
+    height: 300px;
     box-shadow: 5px 5px 5px;
     margin: 0 1em 1em 0;
     padding: 40px;
     position absolute;
     display: inline-block;
+    background: rgba(121, 94, 94, 0.25);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 3.0px );
+    -webkit-backdrop-filter: blur( 3.0px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 
 }
 

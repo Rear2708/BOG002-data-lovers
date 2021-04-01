@@ -5,6 +5,7 @@ import { listType, filterType } from "./data.js";
 
 const dataPokemon = data.pokemon;
 const selectType = listType(dataPokemon);
+console.log(listType(dataPokemon));
 const menu = document.getElementById('menu');
 const newfondo = document.querySelector('body');
 
@@ -14,7 +15,8 @@ menu.addEventListener('click',activePokeball);
 function activePokeball() {
      const select = document.querySelector('main');
       select.innerHTML = "";
-      newfondo.style.background = "white";
+      select.classList.add('main');
+      console.log(select);
 
       //RECORREMOS LA LISTA Y CREAMOS UNA TARJETA POR CADA UNO
       selectType.forEach(item => {
@@ -38,20 +40,24 @@ function mostrarPorTipo(event){
       
       const tipo = event.currentTarget.id;
       const arrayFiltrado = filterType(tipo,dataPokemon);
-      console.log(arrayFiltrado);
-     const select = document.querySelector('main');
-     select.innerHTML = "";
-     newfondo.style.background = "white";
+      const select = document.querySelector('main');
+      select.innerHTML = "";
+      
   
      for(let i = 0; i < arrayFiltrado.length; i++){
-      const name = document.createElement('div');   
-      const p = document.createElement('p');
+      const card = document.createElement('div');   
+      const name = document.createElement('p');
+      const num = document.createElement('p');
       const img = document.createElement('img');
-      img.textContent = arrayFiltrado[i].img;
-      p.textContent = arrayFiltrado[i].name;
-      document.querySelector('#list-tipos').appendChild(name).appendChild(p).appendChild(img);
-      name.classList.add('card-pokemon');
-      console.log(name);
+      const about = document.createElement('p');
+      about.textContent = arrayFiltrado[i].about;
+      img.src = arrayFiltrado[i].img;
+      num.textContent = arrayFiltrado[i].num;
+      name.textContent = arrayFiltrado[i].name;
+      document.querySelector('#list-tipos').appendChild(card).appendChild(img);
+      document.querySelector('#list-tipos').appendChild(card).appendChild(name).appendChild(num).appendChild(about);
+      card.classList.add('card-pokemon');
+     
 
 }
 }

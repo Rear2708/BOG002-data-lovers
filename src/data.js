@@ -9,6 +9,7 @@ export const listType = (Pokemons) => {
   for (let i=0; i < Pokemons.length; i++){
         tiposPokemon = Pokemons[i].type[0];
         todosLosTiposJuntos.push(tiposPokemon);
+        
 
        }
     return [...new Set (todosLosTiposJuntos)];
