@@ -1,32 +1,54 @@
 import pokemon from './data/pokemon/pokemon.js';
 import data from './data/pokemon/pokemon.js';
+import { listType, filterType } from "./data.js";
 
 
-console.log(data);
+const dataPokemon = data.pokemon;
+const selectType = listType(dataPokemon);
+const menu = document.getElementById('menu');
+const newfondo = document.querySelector('body');
 
 
-for (let i=0; i<data.pokemon.length; i++){
-    console.log(data.pokemon[i].type[0]);
-};
+menu.addEventListener('click',activePokeball);
 
+function activePokeball() {
+     const select = document.querySelector('main');
+      select.innerHTML = "";
+      newfondo.className="nuevoFondo";
 
-const typePokemon = document.getElementById('pokeType');
-const mesage = document.createElement("span");
+      //RECORREMOS LA LISTA Y CREAMOS UNA TARJETA POR CADA UNO
+      selectType.forEach(item => {
+      const div = document.createElement('div');
+      const p = document.createElement('p');
+      p.textContent = item;
+      div.id = item;
+      document.querySelector('#list-tipos').appendChild(div).appendChild(p);
+      div.classList.add('div-shadow');
 
-
-typePokemon.addEventListener('click',function(){
-const newImg = document.getElementById('imagen');
-newImg.src= "../images/203876.jpg";
-});
-
-typePokemon.addEventListener('mouseover',function(){
-      mesage.innerHTML = "Aqui podras consultar los tipos de pokemon";
-      mesage.style.color = "white";
-      mesage.style.visibility = "visible";
-      document.getElementById('pokeType').appendChild(mesage);
-});
-
-typePokemon.addEventListener('mouseout',hiddenMesage);
-   function hiddenMesage(){
-    mesage.style.visibility = 'hidden';
-   }
+      div.addEventListener('click',mostrarPorTipo);
+     });      
+}
+function mostrarPorTipo(event){
+      
+      const tipo = event.currentTarget.id;
+      const arrayFiltrado = filterType(tipo,dataPokemon);
+      console.log(arrayFiltrado);
+     const select = document.querySelector('main');
+     select.innerHTML = "";
+     newfondo.className="nuevoFondo";
+     for(let i = 0; i < arrayFiltrado.length; i++){     
+      const card = document.createElement('div'); 
+      const num = document.createElement('p');  
+      const name = document.createElement('p');
+      const img = document.createElement('img');
+      const about = document.createElement('p');
+      img.src = arrayFiltrado[i].img;
+      name.textContent = arrayFiltrado[i].name;
+      num.textContent = arrayFiltrado[i].num;
+      about.textContent = arrayFiltrado[i].about;
+      document.querySelector('#list-tipos').appendChild(card).appendChild(num).appendChild(name).appendChild(about);
+      document.querySelector('#list-tipos').appendChild(card).appendChild(img);
+      card.classList.add('card-pokemon');
+      console.log(name);
+}
+}

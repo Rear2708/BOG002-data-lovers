@@ -1,52 +1,103 @@
 @import url('https://fonts.googleapis.com/css2?family=Thasadith&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 *{
-    border: 0;
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    border: 0;
+}
+header nav #menu{
+    width: 137px;
+    height: 131px;
+    left: calc(50% - 137px/2 - 410.5px);
+    top: 214px;
+}
+.nuevoFondo{
+    width: 100%;
+    height: 100vh;
+    background-image: url(/images/PMC001_0009_レイヤー-10.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    z-index: -4;
 }
 body{
     width: 100%;
     height: 100vh;
-    background-image:url(/images/wp1957143.png);
+    background-image: url(/images/PMC001_0009_レイヤー-10.png);
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
+    z-index: -4;
 }
 body main #bienvenido h1{
-    font-family: 'Thasadith', sans-serif;
-    font-size: 70px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 28px;
     font-weight: bolder;
-    margin-top: 60px;
-    color: black;
-    margin-left: 40%;
-    width: 380px;
+    color: #FFFFFF;
+    margin-top: 150px;
 }
-.menuSearch {
+body main #bienvenido img{
+    width: 532px;
+    height: 212px;
+    margin-top: 20px;
+}
+body main #infoBienvenida h3{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+    color: #FFFFFF;
+    margin-top: 42px;
+    width: 690px;
+    margin-left: 19%;
+}
+main{
     position: absolute;
-    left: 5%;
-    top: 100px;
-    
+    top: 10%;
+    left: 30%;
+    width: 1103px;
+    height: 553px;
+    left: calc(50% - 1103px/2 - 0.5px);
+    top: 95px;
+    text-align: center;
+    background: rgba(68, 213, 222, 0.72);
+    border-radius: 66px;
 }
-.menuSearch li{
-    width: 20%;
-    margin: 10px;
-    display: flex;
-    list-style: none;
-    cursor: pointer;
-    transition: 0.5s;
+#flecha{
+    display: none;
 }
-.menuSearch li:hover{
-    transform: translateX(20px);
+.div-shadow{
+    width: 50px;
+    height: 50px;
+    box-shadow: 5px 5px 5px;
+    margin: 0 1em 1em 0;
+    padding: 40px;
+    display: inline-block;
+    z-index: 4;
 }
- li img{
-     width: 60px;
-     height: 60px;
+.card-pokemon{
+    width: 50px;
+    height: 50px;
+    box-shadow: 5px 5px 5px;
+    margin: 0 1em 1em 0;
+    padding: 40px;
+    display: inline-block;
+    z-index: 4;
 }
-
-
-
-@media screen and (max-width: 380px){
+footer{
+    position: absolute;
+    width: 100%;
+    height: 38px;
+    top:102%;
+    background: rgba(38, 130, 136, 0.86);
+}
+footer p{
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 12px;
+    line-height: 12px;
+    margin-top: 15px;
+}
+/*@media screen and (max-width: 380px){
     header{
         width: 380px;
     }
@@ -56,7 +107,7 @@ body main #bienvenido h1{
         margin-top: 308px;
         
     }
-    .menuSearch #pokeType{
+    .menuSearch #type1{
         position:fixed;
     }
     .menuSearch .lista{
@@ -81,7 +132,7 @@ body main #bienvenido h1{
         width: 380px;
     }
     body main #bienvenido h1{
-        font-family: 'Thasadith', sans-serif;
+        font-family: 'Press Start 2P', cursive;
         font-size: 30px;
         font-weight: lighter;
         margin-top: 60px;
@@ -123,10 +174,10 @@ body main #bienvenido h1{
         margin-top: 100vh;
     }
     footer p{
-        font-family:'Thasadith', sans-serif;
+        font-family:'Press Start 2P', cursive;
         color: black;
         font-size: 15px;
         font-weight: 800;
         text-align: center;
     }
-}
+}*/
