@@ -1,7 +1,6 @@
 import pokemon from './data/pokemon/pokemon.js';
 import data from './data/pokemon/pokemon.js';
-import { listType, filterType } from "./data.js";
-
+import { listType, filterType, filterIcono } from "./data.js";
 
 const dataPokemon = data.pokemon;
 const selectType = listType(dataPokemon);
@@ -20,14 +19,15 @@ function activePokeball() {
       selectType.forEach(item => {
       const div = document.createElement('div');
       const p = document.createElement('p');
+      const img = document.createElement('img');
       p.textContent = item;
       div.id = item;
-      document.querySelector('#list-tipos').appendChild(div).appendChild(p);
+      img.src = filterIcono;
+      document.querySelector('#list-tipos').appendChild(div).appendChild(p).appendChild(img);
       div.classList.add('div-shadow');
-
       div.addEventListener('click',mostrarPorTipo);
      });      
-}
+}     console.log(filterIcono)
 function mostrarPorTipo(event){
       
       const tipo = event.currentTarget.id;
@@ -50,5 +50,5 @@ function mostrarPorTipo(event){
       document.querySelector('#list-tipos').appendChild(card).appendChild(img);
       card.classList.add('card-pokemon');
       console.log(name);
-}
+      }
 }

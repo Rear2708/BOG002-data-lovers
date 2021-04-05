@@ -67,11 +67,22 @@ main{
 .div-shadow{
     width: 50px;
     height: 50px;
-    box-shadow: 5px 5px 5px;
-    margin: 0 1em 1em 0;
+    margin-top: 30px;
     padding: 40px;
-    display: inline-block;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
     z-index: 4;
+}
+.div-shadow img{
+    width: 50px;
+    height: 50px;
+}
+.div-shadow p{
+    font-family: 'Press Start 2P', cursive;
+    margin-top: 60px;
+    font-size: 12px;
 }
 .card-pokemon{
     width: 50px;
