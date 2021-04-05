@@ -1,123 +1,161 @@
 @import url('https://fonts.googleapis.com/css2?family=Thasadith&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
-    
+    border: 0;
+}
+header nav #menu{
+    width: 137px;
+    height: 131px;
+    left: calc(50% - 137px/2 - 410.5px);
+    top: 214px;
+    z-index: 5;
+}
+.nuevoFondo{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/PMC001_0009_レイヤー-10.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    z-index: -4;
 }
 body{
     width: 100%;
     height: 100vh;
-    background-image: url(../images/14729.jpg);
+    background-image: url(../images/PMC001_0009_レイヤー-10.png);
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
+    z-index: -4;
 }
 body main #bienvenido h1{
-    font-family: 'Thasadith', sans-serif;
-    font-size: 30px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 28px;
     font-weight: bolder;
-    color: black;
+    color: #FFFFFF;
+    margin-top: 150px;
+}
+body main #bienvenido img{
+    width: 532px;
+    height: 212px;
+    margin-top: 20px;
+}
+body main #infoBienvenida h3{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+    color: #FFFFFF;
+    margin-top: 42px;
+    width: 690px;
+    margin-left: 19%;
 }
 main{
     position: absolute;
     top: 10%;
     left: 30%;
-    background: rgba( 159, 20, 134, 0.25 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 8.5px );
--webkit-backdrop-filter: blur( 8.5px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
-}
-main img{
-    position: relative;
-    left: 20%;
-}
- main #infoBienvenida h3{
-    position: relative;
-    top: 250px;
-    left: 0;
-}
-.menuSearch {
-    position: absolute;
-    left: 5%;
-    top: 100px;
+    width: 1103px;
+    height: 500px;
+    left: calc(50% - 1103px/2 - 0.5px);
+    top: 95px;
+    text-align: center;
+    background: rgba(68, 213, 222, 0.72);
+    border-radius: 66px;
+    backdrop-filter: blur( 3px );
+
     
 }
-nav #menu{
-    
-    width: 150px;
-    height: 150px;
-    transition: 0.5s;
-}
- nav #menu:hover{
-    transform: translateY(20px);
+.main-hidden{
+    background:rgba(211, 191, 191, 0.23);
+    backdrop-filter: blur(0px);
 }
 
 #flecha{
-    visibility: hidden;
-}
-footer{
-    margin: 10px;
-    display: flex;
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-
+    display: none;
 }
 .div-shadow{
-    width: 20%;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     box-shadow: 5px 5px 5px;
     margin: 0 1em 1em 0;
     padding: 40px;
-    position:relative;
     display: inline-block;
-    background: rgba( 80, 227, 194, 0.45 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 11.0px );
-    -webkit-backdrop-filter: blur( 11.0px );
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    z-index: 4;
 }
 .card-pokemon{
-    width: 300px;
-    height: 300px;
-    box-shadow: 5px 5px 5px;
-    margin: 0 1em 1em 0;
-    padding: 40px;
-    position absolute;
+    width: 20%;
+    height: 80%;
+    margin: 10px;
+    background: rgba( 255, 255, 255, 0.60 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 17.5px );
+-webkit-backdrop-filter: blur( 17.5px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
     display: inline-block;
-    background: rgba(121, 94, 94, 0.25);
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 3.0px );
-    -webkit-backdrop-filter: blur( 3.0px );
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-
+    
 }
-
-@media screen and (max-width: 380px){
+.card-pokemon img{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 10%;
+    left: 0%;
+}
+.card-pokemon .numPokemon{
+  position: relative;
+    top: 20px;
+    right: 5px;
+    font-size: 20px;
+}
+.card-pokemon .namePokemon{
+    position: absolute;
+    top:160px;
+    left: 30px;
+    font-size: 15px;
+}
+.card-pokemon .aboutPokemon{
+    position: relative;
+    top: 20px;
+}
+footer{
+    position: absolute;
+    width: 100%;
+    height: 38px;
+    top:102%;
+    background: rgba(38, 130, 136, 0.86);
+}
+footer p{
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 12px;
+    line-height: 12px;
+    margin-top: 15px;
+}
+/*@media screen and (max-width: 380px){
     header{
         width: 380px;
     }
-    header #menu{
-        width: 100px;
-        height: 100px;
-        margin-top: 350px;
-        margin-left: 30%;
+    .menuSearch {
+        position: absolute;
+        margin-left: 35%;
+        margin-top: 308px;
+        
+    }
+    .menuSearch #type1{
         position:fixed;
     }
-    header #menu img{
-        width: 100%;
-        height: 100%;
-
+    .menuSearch .lista{
+        visibility: hidden;
+    }
+    .menuSearch li:hover{
+        transform: translateX(0px);
     }
     body{
         width: 380px;
-        height: 500px;
-        background-image:url(/images/a36106f5c9db1aaa5a29149854f4975f.jpg);
+        height: 800px;
+        background-image:url(/images/unnamed.jpg);
         background-repeat: no-repeat;
         background-size:cover;
     }
@@ -130,11 +168,11 @@ footer{
         width: 380px;
     }
     body main #bienvenido h1{
-        font-family: 'Thasadith', sans-serif;
+        font-family: 'Press Start 2P', cursive;
         font-size: 30px;
         font-weight: lighter;
         margin-top: 60px;
-        color: aliceblue;
+        color: black;
         margin-left: 30%;
         width: 380px;
     }
@@ -158,24 +196,23 @@ footer{
         padding-top: 15px;
         padding-left: 8px;
         padding-right: 8px;
-
     }
     body main #infoBienvenida img{
         border-radius: 80px;
         width: 50px;
         height: 50px;
-        margin-left: 80px;
+        margin-left: 35%;
     }
     footer{
         width: 380px;
         background-color:rgba(221, 223, 216, 1);
-        margin-top: 90%;
+        margin-top: 100vh;
     }
     footer p{
-        font-family:'Thasadith', sans-serif;
+        font-family:'Press Start 2P', cursive;
         color: black;
         font-size: 15px;
         font-weight: 800;
         text-align: center;
     }
-}
+}*/
