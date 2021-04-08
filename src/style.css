@@ -85,14 +85,46 @@ main{
     font-size: 12px;
 }
 .card-pokemon{
-    width: 50px;
-    height: 50px;
-    box-shadow: 5px 5px 5px;
-    margin: 0 1em 1em 0;
-    padding: 40px;
+    width: 20%;
+    height: 80%;
+    margin: 10px;
+    background: rgba( 255, 255, 255, 0.60 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 17.5px );
+    -webkit-backdrop-filter: blur( 17.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
     display: inline-block;
-    z-index: 4;
+    
+} 
+
+.card-pokemon img{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 10%;
+    left: 0%;
 }
+.card-pokemon .numPokemon{
+  position: relative;
+    top: 20px;
+    right: 5px;
+    font-size: 20px;
+}
+.card-pokemon .namePokemon{
+    position: absolute;
+    top:160px;
+    left: 30px;
+    font-size: 15px;
+}
+.card-pokemon .aboutPokemon{
+    position: relative;
+    top: 20px;
+}
+.main-hidden{
+    background:transparent;
+}
+
 footer{
     position: absolute;
     width: 100%;
