@@ -56,27 +56,38 @@ function frontCard(event){
       num.className = 'numPokemon';
       name.className = "namePokemon";
       about.className = "aboutPokemon";
-      card.addEventListener('click', backCard);
+      
+      card.addEventListener('click',()=>{
+            card.innerHTML="";
+            const weight = document.createElement ('p');
+            const height = document.createElement ('p');
+            const resistant = document.createElement('div');
+            const weaknesses = document.createElement('div');
+            const prevEvolution = document.createElement('div');
+            const candy = document.createElement('div');
+            const specialAttack = document.createElement('div');
+
+            weight.textContent=arrayFiltrado[i].size.weight;
+            height.textContent=arrayFiltrado[i].size.height;
+            resistant.textContent=arrayFiltrado[i].resistant;
+            weaknesses.textContent=arrayFiltrado[i].weaknesses;
+            candy.textContent=arrayFiltrado[i].evolution.candy;
+            if (arrayFiltrado[i].evolution["prev-evolution"]!= undefined && arrayFiltrado[i].evolution["prev-evolution"].length>0){
+                  prevEvolution.textContent=arrayFiltrado[i].evolution["prev-evolution"][0].name;
+            } else{
+                  prevEvolution.textContent="sin evoluciones previas";
+            };
+            if (arrayFiltrado[i]["special-attack"]!= undefined && arrayFiltrado[i]["special-attack"].length>0){
+                  specialAttack.textContent=arrayFiltrado[i]["special-attack"][0].name;
+            } else{
+                  specialAttack.textContent="sin ataques especiales";
+            };
+            card.appendChild(weight).appendChild(height);
+            card.appendChild(resistant).appendChild(weaknesses);
+            card.appendChild(prevEvolution);
+            card.appendChild(candy);
+            card.appendChild(specialAttack);
+       });
       }
 }
-function backCard(event){
-      const tipo = event.currentTarget.id;
-      const arrayFiltrado = filterType(tipo,dataPokemon);
-      select.innerHTML = "";
-     for(let i = 0; i < arrayFiltrado.length; i++){
-      const back = document.createElement('div'); 
-      const weight= document.createElement('p');
-      const height = document.createElement('p');
-      /*const resistant = document.createElement('div');
-      const weaknesses = document.createElement('div');
-      const prevEvolution = document.createElement('div');
-      const evolution = document.createElement('div');
-      const specialAttack = document.createElement('div');*/
-      weight.textContent = arrayFiltrado[i].weight;
-      height.textContent = arrayFiltrado[i].height;
-      back.className ='card-pokemon';
-      cardPokemon.appendChild(back).appendChild(weight).appendChild(height);
-    /* cardPokemon.appendChild(backCard).appendChild(resistant).appendChild(weaknesses).appendChild(prevEvolution);
-      cardPokemon.appendChild(evolution).appendChild(specialAttack);*/
-     }
-};
+
