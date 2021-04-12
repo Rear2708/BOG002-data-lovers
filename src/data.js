@@ -30,3 +30,8 @@ export function ordered(data){
   return data.sort((a,b) => a.localeCompare(b));
 }
 
+
+  export let ordenArrayObjetos = (data) =>{
+     return data.sort((a,b) => (a.name > b.name) ? 1 : -1);
+     
+ }

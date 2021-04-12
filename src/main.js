@@ -1,6 +1,6 @@
 //import pokemon from './data/pokemon/pokemon.js';
 import data from './data/pokemon/pokemon.js';
-import { listType, filterType, upperCase, ordered} from "./data.js";
+import { listType, filterType, upperCase, ordered, ordenArrayObjetos} from "./data.js";
 
 
 const dataPokemon = data.pokemon;
@@ -38,7 +38,7 @@ function activePokeball() {
 function frontCard(event){
       const tipo = event.currentTarget.id;
       const arrayFiltrado = filterType(tipo,dataPokemon);
-      
+      ordenArrayObjetos(arrayFiltrado);
       
       select.className = "main-hidden";
      
@@ -63,7 +63,7 @@ function frontCard(event){
       
      
       
-      card.addEventListener('mouseover',()=>{
+      card.addEventListener('mouseover',() =>{
             
             card.innerHTML= "";
             const weight = document.createElement ('p');
@@ -89,7 +89,7 @@ function frontCard(event){
             } else{
                   specialAttack.textContent=" Sin ataques especiales";
             }
-      
+            
             card.appendChild(weight).appendChild(height);
             card.appendChild(resistant).appendChild(weaknesses);
             card.appendChild(prevEvolution);
@@ -102,7 +102,8 @@ function frontCard(event){
             candy.className = 'evolution';
             prevEvolution.className = 'pre-evolution';
             specialAttack.className = 'special-attack';
-            
+             
+           
                
             });
           
