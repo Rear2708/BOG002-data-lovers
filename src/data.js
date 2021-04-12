@@ -8,10 +8,15 @@ export const listType = (Pokemons) => {
   let todosLosTiposJuntos = [];
   for (let i=0; i < Pokemons.length; i++){
         tiposPokemon = Pokemons[i].type[0];
-        todosLosTiposJuntos.push(tiposPokemon);
-   }
-    return [...new Set (todosLosTiposJuntos)];
+        if(todosLosTiposJuntos.includes(tiposPokemon)){
+          //no hacemos nada porque ya esta incluido
+        }else{
+          todosLosTiposJuntos.push(tiposPokemon);
+        }
+       }
+    return todosLosTiposJuntos;
 }
+
 
 export const filterType = (tipo, Pokemons) => {
    return Pokemons.filter(Pokemon => Pokemon.type[0] === tipo);
@@ -24,3 +29,4 @@ export function upperCase(data) {
 export function ordered(data){
   return data.sort((a,b) => a.localeCompare(b));
 }
+

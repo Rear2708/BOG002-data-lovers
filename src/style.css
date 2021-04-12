@@ -19,15 +19,17 @@ header nav #menu{
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
+    background-attachment: fixed;
     z-index: -4;
 }
 body{
     width: 100%;
-    height: 100vh;
+    overflow: auto;
     background-image: url(../images/PMC001_0009_レイヤー-10.png);
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
+    background-attachment: fixed;
     z-index: -4;
 }
 body main #bienvenido h1{
@@ -54,20 +56,20 @@ main{
     position: absolute;
     top: 10%;
     left: 30%;
-    width: 1103px;
+    width: 1100px;
     height: 500px;
     left: calc(50% - 1103px/2 - 0.5px);
     top: 95px;
     text-align: center;
     background: rgba(68, 213, 222, 0.72);
     border-radius: 66px;
-    backdrop-filter: blur( 3px );
+    
 
     
 }
 .main-hidden{
-    background:rgba(211, 191, 191, 0.23);
-    backdrop-filter: blur(0px);
+    background:transparent;
+        
 }
 
 #flecha{
@@ -76,45 +78,82 @@ main{
 .div-shadow{
     width: 50px;
     height: 50px;
-    box-shadow: 5px 5px 5px;
-    margin: 0 1em 1em 0;
+    margin-top: 30px;
     padding: 40px;
-    display: inline-block;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
     z-index: 4;
+    
 }
-.card-pokemon{
+.div-shadow img{
+    width: 50px;
+    height: 50px;
+}
+.div-shadow p{
+    font-family: 'Press Start 2P', cursive;
+    margin-top: 60px;
+    font-size: 12px;
+}
+.back-pokemon{
+    font-family: 'Press Start 2P', cursive;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+    background: rgba( 255, 255, 255, 0.60 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 17.5px );
+   -webkit-backdrop-filter: blur( 17.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    display:inline-block;
+    backface-visibility: hidden;
+      
+}
+
+.front-pokemon{
     width: 20%;
     height: 80%;
     margin: 10px;
     background: rgba( 255, 255, 255, 0.60 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 17.5px );
--webkit-backdrop-filter: blur( 17.5px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
-    display: inline-block;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 17.5px );
+   -webkit-backdrop-filter: blur( 17.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    display:inline-block;
+    backface-visibility: hidden;
+    transition: all 0.5s ease;
     
 }
-.card-pokemon img{
+.front-pokemon:hover{
+  transform: rotateY(180deg);
+}
+ 
+.front-pokemon img{
+    background-color:#FFFFFF;
+    border-radius: 50%;
     width: 100px;
     height: 100px;
     position: relative;
     top: 10%;
     left: 0%;
 }
-.card-pokemon .numPokemon{
+.front-pokemon .numPokemon{
   position: relative;
     top: 20px;
     right: 5px;
     font-size: 20px;
 }
-.card-pokemon .namePokemon{
+.front-pokemon .namePokemon{
     position: absolute;
     top:160px;
     left: 30px;
     font-size: 15px;
 }
-.card-pokemon .aboutPokemon{
+.front-pokemon .aboutPokemon{
     position: relative;
     top: 20px;
 }
@@ -133,6 +172,42 @@ footer p{
     line-height: 12px;
     margin-top: 15px;
 }
+.size{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    margin: 15px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 10%;
+    border-bottom: 2px solid black;;
+}
+.resistant,.weaknesse{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 7px;
+    padding: 5px;
+    margin: 10px;
+    align-items: center;
+    display: inline;
+    justify-content:space-around;
+    position: relative;
+    top: 15%;
+    
+
+}
+.pre-evolution,.evolution,.special-attack {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    padding: 20px;
+    display: inline-block;
+    justify-content: space-between;
+    position: relative;
+    top:20%;
+    
+    
+} 
+
 /*@media screen and (max-width: 380px){
     header{
         width: 380px;
