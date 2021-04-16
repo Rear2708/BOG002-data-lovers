@@ -25,4 +25,28 @@ export function upperCase(data) {
 export function ordered(data){
   return data.sort((a,b) => a.localeCompare(b));
 }
+export let ordenArrayObjetos = (data) =>{
+  return data.sort((a,b) => (a.name > b.name) ? 1 : -1);
+}
 
+ 
+export function estadisticaPeso(dataPokemon){
+  let pesoTodos=0;
+  let pesoPromedio=0;
+  for(let i=0;i< dataPokemon.length;i++){
+        const peso= dataPokemon[i].size.weight;
+        pesoTodos+= parseInt(peso);
+        pesoPromedio= pesoTodos/i+"kg";
+  }
+  return pesoPromedio;
+}
+export function estadisticaAltura(dataPokemon){
+  let alturaTodos=0;
+  let alturaPromedio=0;
+  for(let i=0;i< dataPokemon.length;i++){
+        const altura= dataPokemon[i].size.height;
+        alturaTodos+= parseInt(altura);
+        alturaPromedio= alturaTodos/i+"m";
+  }
+  return alturaPromedio;
+}
