@@ -1,6 +1,4 @@
 //Una funcion que filtre los tipos de pokemon
-
-
 export const listType = (Pokemons) => {
   let tiposPokemon = [];
   let todosLosTiposJuntos = [];

@@ -13,7 +13,6 @@ const estadistica = document.querySelector('.estadisticas');
 
 menu.addEventListener('click',activePokeball);
 estadistica.addEventListener('click', estadisticaPokemon);
-
 function activePokeball() {
      const select = document.querySelector('main');
       select.innerHTML = "";
@@ -126,3 +125,4 @@ function estadisticaPokemon(){
       select.appendChild(altura);
       select.className = 'mainAzul';
 } 
+

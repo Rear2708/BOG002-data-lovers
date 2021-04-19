@@ -27,6 +27,7 @@ header nav #menu{
 body{
     width: 100%;
     background-image: url(/images/PMC001_0009_レイヤー-10.png);
+
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
@@ -73,6 +74,7 @@ main{
 }
 #flecha{
     display: none;
+
 }
 .div-shadow{
     width: 90px;
@@ -207,6 +209,7 @@ footer p{
 }
 
 @media screen and (max-width: 414px){
+
     header{
         width: 100%;
         border: 0;
