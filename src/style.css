@@ -1,165 +1,401 @@
 @import url('https://fonts.googleapis.com/css2?family=Thasadith&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
-    
+    border: 0;
 }
-body{
+header nav {
+    padding-top: 30px;
+    padding-right: 100px;
+    padding-left: 100px;
+}
+header nav #menu{
+    width: 137px;
+    height: 131px;
+    top: 0px;
+}
+.nuevoFondo{
     width: 100%;
-    height: 100vh;
-    background-image: url(../images/home.png);
+    background-image: url(/images/PMC001_0009_レイヤー-10.png);
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
+    background-attachment: fixed;
+    z-index: -4;
+}
+body{
+    width: 100%;
+    background-image: url(/images/PMC001_0009_レイヤー-10.png);
+
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -4;
 }
 body main #bienvenido h1{
-    font-family: 'Thasadith', sans-serif;
-    font-size: 30px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 28px;
+    text-align: center;
     font-weight: bolder;
-    color: black;
+    color: #FFFFFF;
+}
+body main #bienvenido img{
+    width: 532px;
+    height: 212px;
+    margin-top: 20px;
+}
+body main #infoBienvenida h3{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-align: center;
 }
 main{
-    position: absolute;
-    top: 10%;
+    box-sizing: border-box;
+    padding: 5%;
     left: 30%;
+    width: 1103px;
+    text-align: center;
+    background: rgba(68, 213, 222, 0.72);
+    border-radius: 66px;
+    margin-left: 210px;
+    margin-bottom: 50px;
 }
-main img{
-    position: relative;
-    left: 20%;
+.mainAzul{
+    left: 30%;
+    width: 1103px;
+    text-align: center;
+    background: rgba(68, 213, 222, 0.72);
+    border-radius: 66px;
+    margin-left: 210px;
+    margin-bottom: 50px;
 }
- main #infoBienvenida h3{
-    position: relative;
-    top: 250px;
-    left: 0;
-}
-.menuSearch {
-    position: absolute;
-    left: 5%;
-    top: 100px;
-    
-}
-.menuSearch li{
-    width: 20%;
-    margin: 10px;
-    display: flex;
-    list-style: none;
-    cursor: pointer;
-    transition: 0.5s;
-}
-.menuSearch li:hover{
-    transform: translateX(20px);
-}
- li img{
-     width: 60px;
-     height: 60px;
-     position: relative;
-     top: 50px;
-     
-}
-ul{
-    visibility: hidden;
-}
-nav #menu{
-    
-    width: 150px;
-    height: 150px;
-    transition: 0.5s;
-}
- nav #menu:hover{
-    transform: translateY(20px);
-}
-
 #flecha{
-    visibility: hidden;
+    display: none;
+
+}
+.div-shadow{
+    width: 90px;
+    height: 90px;
+    padding: 20px;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    z-index: 4;
+}
+.div-shadow img{
+    width: 90px;
+    height: 90px;
+}
+.div-shadow p{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+}
+.card-pokemon{
+    width: 20%;
+    height: 360px;
+    margin: 10px;
+    display:inline-block;
+    background: rgba( 255, 255, 255, 0.60 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 15px 5px 20px;
+    box-sizing: border-box;
+    vertical-align: middle;
+} 
+
+.card-pokemon img{
+    width: 100px;
+    height: 100px;
+    border: 1px solid #F2A81D ;
+    border-radius: 50px;
+    background-color: #F2A81D;
+}
+.card-pokemon .numPokemon{
+    font-size: 13px;
+    font-family: 'Press Start 2P', cursive;
+    font-style: normal;
+    font-weight: normal;
+}
+.card-pokemon .namePokemon{
+    font-size: 13px;
+    font-family: 'Press Start 2P', cursive;
+    font-style: normal;
+    font-weight: normal;
+}
+.card-pokemon .aboutPokemon{
+    font-size: 15px;
+    font-family: Prompt;
+    text-align: justify;
+}
+.main-hidden{
+    background:transparent;
+}
+.size{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    margin: 15px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    top: 10%;
+    border-bottom: 2px solid black;
+}
+.resistant{
+    font-family: 'Press Start 2P', cursive;
+    display: block;
+    text-align: center;
+    line-height: 12px;
+    font-size: 9px;
+}
+.weaknesses{
+    font-family: 'Press Start 2P', cursive;
+    display: block;
+    text-align: center;
+    line-height: 12px;
+    font-size: 9px;
+    margin-top: 20px;
+}
+.pre-evolution,.evolution,.special-attack {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    padding: 20px;
+    display: inline-block;
+    justify-content: space-between;
+    top:20%;
+}
+.estadisticas{
+    padding: 12px 12px;
+    float: right;
+    border: 5px solid black ;
+    border-radius: 10px;
+    background-color: #EAF205;
+    font-family: 'Press Start 2P', cursive;
+    
+}
+.estadisticas:hover{
+    transform: translateX(20px);
+    transition: 0.5s;
+}
+.mainAzul p{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    margin-top: 20px;
+}
+.mainAzul img{
+    width: 100px;
+    height: 100px;
+    margin-top: 15px;
+    border: 1px solid #EAF205 ;
+    border-radius: 50px;
+    background-color: #EAF205;
 }
 footer{
-    margin: 10px;
-    position: absolute;
-    bottom: 0;
-    left: 40%;
+    padding-top: 15px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 38px;
+    background: rgba(38, 130, 136, 0.86);
+}
+footer p{
+    font-family: 'Press Start 2P', cursive;
     text-align: center;
-
+    color: #FFFFFF;
+    font-size: 12px;
 }
 
-@media screen and (max-width: 380px){
-    header{
-        width: 380px;
-    }
-    header #menu{
-        width: 100px;
-        height: 100px;
-        margin-top: 350px;
-        margin-left: 30%;
-        position:fixed;
-    }
-    header #menu img{
-        width: 100%;
-        height: 100%;
+@media screen and (max-width: 414px){
 
+    header{
+        width: 100%;
+        border: 0;
+        margin: 0;
+        padding: 0;
     }
     body{
-        width: 380px;
-        height: 500px;
-        background-image:url(/images/a36106f5c9db1aaa5a29149854f4975f.jpg);
+        padding: 0px;
+        width: 100%;
+        height: 896px;
+        background-image: url(/images/wp7668269.jpg);
         background-repeat: no-repeat;
         background-size:cover;
+        background-position: center;
+        background-attachment: fixed;
     }
-    body main #bienvenido{
-        display:flex;
-        align-content: center;
-        justify-content: center;
-        flex-direction: column;
-        position: relative;
-        width: 380px;
+    main{
+        width: 314px;
+        height: 396px;
+        background: rgba(10, 21, 114, 0.72);
+        border-radius: 66px;
     }
     body main #bienvenido h1{
-        font-family: 'Thasadith', sans-serif;
-        font-size: 30px;
-        font-weight: lighter;
-        margin-top: 60px;
-        color: aliceblue;
-        margin-left: 30%;
-        width: 380px;
+        font-family: Press Start 2P;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        color: #FFFFFF;
+        text-align: center;
     }
     body main #bienvenido img{
-        margin-top: 10px;
-        width: 230px;
-        margin-left: 20%;
-    }
-    body main #infoBienvenida{
-        background-color:rgba(221, 223, 216, 0.7); 
-        width: 200px;
-        height: 140px;
-        margin-left: 25%;
-        margin-top: 20px;
-        border-radius: 20px;
-        box-shadow: 8px 10px black;
+        width: 233px;
+        height: 96px;
+        left: 90px;
+        top: 232px;
     }
     body main #infoBienvenida h3{
+        width: 242px;
+        height: 55px;
+        margin-top: 18px;
+        font-family: Press Start 2P;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 11px;
         text-align: center;
-        font-size: 16px;
-        padding-top: 15px;
-        padding-left: 8px;
-        padding-right: 8px;
-
+        margin-left: 12%;
+        color: #FFFFFF;
     }
-    body main #infoBienvenida img{
-        border-radius: 80px;
+    #flecha{
+        display: block;
+        width: 56px;
+        height: 60px;
+        left: 179px;
+        margin-top: -300px;
+        margin-left: 40%;
+        transform: rotate(180deg);
+    }
+    header nav #menu{
+        width: 137px;
+        height: 131px;
+        margin-left: 32%;
+        top: 120px;
+    }
+    .nuevoFondo{
+        width: 100%;
+        height: 896px;
+        background-image: url(/images/wp7668269.jpg);
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-position: center;
+        background-attachment: fixed;
+        z-index: -4;
+    }
+    .div-shadow{
         width: 50px;
         height: 50px;
-        margin-left: 80px;
+        padding: 10px;
+        margin-top:2px;
+        display: inline-flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        z-index: 4;
+    }
+    .div-shadow img{
+        width: 50px;
+        height: 50px;
+    }
+    .div-shadow p{
+        font-family: 'Press Start 2P', cursive;
+        margin-top: 40px;
+        font-size: 8px;
+        color: #FFFFFF;
+    }
+    .card-pokemon{
+        width:45%;
+        height: 55%;
+        margin: 3px;
+        background: rgba( 255, 255, 255, 0.60 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 17.5px );
+        -webkit-backdrop-filter: blur( 17.5px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        display: inline-block;
+    } 
+    
+    .card-pokemon img{
+        width: 60px;
+        border: 1px solid #F2A81D ;
+        border-radius: 50px;
+        background-color: #F2A81D;
+        height: 60px;
+        top: 10%;
+        left: 0%;
+    }
+    .card-pokemon .numPokemon{
+        top: 13px;
+        right: 0px;
+        font-size: 10px;
+        font-family: 'Press Start 2P', cursive;
+    }
+    .card-pokemon .namePokemon{
+        top:80px;
+        left: 0px;
+        font-size: 8px;
+        font-family: 'Press Start 2P', cursive;
+    }
+    .card-pokemon .aboutPokemon{
+        top: 8px;
+        font-family: Prompt;
+        font-size: 10px;
+        text-align: justify;
+        width: 80%;
+        left: 15px;
+    }
+    .main-hidden{
+        background:transparent;
+    }
+    .size{
+        font-family: 'Press Start 2P', cursive;
+        font-size: 7px;
+        line-height: 10px;
+        margin: 8px;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        top: 7%;
+        border-bottom: 0.5px solid black;;
+    }
+    .resistant,.weaknesse{
+        font-family: 'Press Start 2P', cursive;
+        font-size: 7px;
+        padding: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
+        line-height: 15px;
+        align-items: center;
+        display: inline;
+        top: 4%;
+    }
+    .pre-evolution,.evolution,.special-attack {
+        font-family: 'Press Start 2P', cursive;
+        font-size: 8px;
+        padding: 20px;
+        line-height: 8px;
+        display: inline-block;
+        justify-content: space-between;
+        top:7%;
     }
     footer{
-        width: 380px;
-        background-color:rgba(221, 223, 216, 1);
-        margin-top: 90%;
+        width: 100%;
+        height: 32px;
+        left: 0px;
+        top: 864px;
+        background: rgba(10, 21, 114, 0.81);
     }
     footer p{
-        font-family:'Thasadith', sans-serif;
-        color: black;
-        font-size: 15px;
-        font-weight: 800;
+        left: 62px;
+        top: 874px;
+        font-family: Press Start 2P;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 8px;
+        color: #FFFFFF;
         text-align: center;
     }
+    
 }
