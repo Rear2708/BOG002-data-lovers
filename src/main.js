@@ -52,8 +52,10 @@ function frontCard(event){
       name.textContent = arrayFiltrado[i].name;
       num.textContent = arrayFiltrado[i].num;
       about.textContent = arrayFiltrado[i].about;
-      cardPokemon.appendChild(card).appendChild(num).appendChild(name).appendChild(about);
+      cardPokemon.appendChild(card).appendChild(num)
       cardPokemon.appendChild(card).appendChild(img);
+      cardPokemon.appendChild(card).appendChild(name).appendChild(about);
+      
       card.className ='card-pokemon';
       num.className = 'numPokemon';
       name.className = "namePokemon";
@@ -63,11 +65,11 @@ function frontCard(event){
             card.innerHTML="";
             const weight = document.createElement ('p');
             const height = document.createElement ('p');
-            const resistant = document.createElement('div');
-            const weaknesses = document.createElement('div');
-            const prevEvolution = document.createElement('div');
-            const candy = document.createElement('div');
-            const specialAttack = document.createElement('div');
+            const resistant = document.createElement('p');
+            const weaknesses = document.createElement('p');
+            const prevEvolution = document.createElement('p');
+            const candy = document.createElement('p');
+            const specialAttack = document.createElement('p');
 
             weight.textContent= `Weight: ${arrayFiltrado[i].size.weight}`;
             height.textContent=`Height: ${arrayFiltrado[i].size.height}`;
@@ -114,8 +116,8 @@ function estadisticaPokemon(){
       peso.textContent = estadisticaPeso(dataPokemon);
       tituloAltura.textContent = 'Altura promedio Pokemon';
       altura.textContent = estadisticaAltura(dataPokemon);
-      imgPeso.src = '/images/pokemon-go/peso.jpg';
-      imgAltura.src = '/images/pokemon-go/altura.jpg';
+      imgPeso.src = "/images/peso.png";
+      imgAltura.src = "/images/altura.png";
       select.appendChild(imgPeso);
       select.appendChild(tituloPeso);
       select.appendChild(peso);

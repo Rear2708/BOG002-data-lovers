@@ -5,15 +5,18 @@
     margin: 0;
     border: 0;
 }
+header nav {
+    padding-top: 30px;
+    padding-right: 100px;
+    padding-left: 100px;
+}
 header nav #menu{
     width: 137px;
     height: 131px;
-    margin-left: 30px;
-    top:200px;
+    top: 0px;
 }
 .nuevoFondo{
     width: 100%;
-    height: 100vh;
     background-image: url(/images/PMC001_0009_レイヤー-10.png);
     background-repeat: no-repeat;
     background-size:cover;
@@ -23,7 +26,6 @@ header nav #menu{
 }
 body{
     width: 100%;
-    height: 100vh;
     background-image: url(/images/PMC001_0009_レイヤー-10.png);
     background-repeat: no-repeat;
     background-size:cover;
@@ -34,9 +36,9 @@ body{
 body main #bienvenido h1{
     font-family: 'Press Start 2P', cursive;
     font-size: 28px;
+    text-align: center;
     font-weight: bolder;
     color: #FFFFFF;
-    margin-top: 150px;
 }
 body main #bienvenido img{
     width: 532px;
@@ -47,31 +49,27 @@ body main #infoBienvenida h3{
     font-family: 'Press Start 2P', cursive;
     font-size: 16px;
     color: #FFFFFF;
-    margin-top: 42px;
-    width: 690px;
-    margin-left: 19%;
+    text-align: center;
 }
 main{
-    position: absolute;
+    box-sizing: border-box;
+    padding: 5%;
     left: 30%;
     width: 1103px;
-    height: 553px;
-    margin-left:-18%;
-    top:80px;
     text-align: center;
     background: rgba(68, 213, 222, 0.72);
     border-radius: 66px;
+    margin-left: 210px;
+    margin-bottom: 50px;
 }
 .mainAzul{
-    position: absolute;
     left: 30%;
     width: 1103px;
-    height: 553px;
-    margin-left:-18%;
-    top:80px;
     text-align: center;
     background: rgba(68, 213, 222, 0.72);
     border-radius: 66px;
+    margin-left: 210px;
+    margin-bottom: 50px;
 }
 #flecha{
     display: none;
@@ -79,7 +77,6 @@ main{
 .div-shadow{
     width: 90px;
     height: 90px;
-    margin-top: 30px;
     padding: 20px;
     display: inline-flex;
     flex-direction: row;
@@ -93,20 +90,20 @@ main{
 }
 .div-shadow p{
     font-family: 'Press Start 2P', cursive;
-    margin-top: 60px;
     font-size: 12px;
 }
 .card-pokemon{
     width: 20%;
-    height: 70%;
-    margin: 15px;
+    height: 360px;
+    margin: 10px;
+    display:inline-block;
     background: rgba( 255, 255, 255, 0.60 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 17.5px );
-    -webkit-backdrop-filter: blur( 17.5px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
-    display: inline-block;
+    padding: 15px 5px 20px;
+    box-sizing: border-box;
+    vertical-align: middle;
 } 
 
 .card-pokemon img{
@@ -115,31 +112,20 @@ main{
     border: 1px solid #F2A81D ;
     border-radius: 50px;
     background-color: #F2A81D;
-    position: relative;
-    top: 8%;
-    left: 0%;
 }
 .card-pokemon .numPokemon{
-  position: relative;
-    top: 20px;
-    right: 50px;
     font-size: 13px;
     font-family: 'Press Start 2P', cursive;
     font-style: normal;
     font-weight: normal;
 }
 .card-pokemon .namePokemon{
-    position: absolute;
-    top:130px;
-    left: 90px;
     font-size: 13px;
     font-family: 'Press Start 2P', cursive;
     font-style: normal;
     font-weight: normal;
 }
 .card-pokemon .aboutPokemon{
-    position: relative;
-    top: 10px;
     font-size: 15px;
     font-family: Prompt;
     text-align: justify;
@@ -154,18 +140,15 @@ main{
     align-items: center;
     display: flex;
     justify-content: space-between;
-    position: relative;
     top: 10%;
     border-bottom: 2px solid black;
 }
 .resistant{
     font-family: 'Press Start 2P', cursive;
     display: block;
-    margin-right:20px;
     text-align: center;
     line-height: 12px;
     font-size: 9px;
-    margin-top: 60px;
 }
 .weaknesses{
     font-family: 'Press Start 2P', cursive;
@@ -181,16 +164,39 @@ main{
     padding: 20px;
     display: inline-block;
     justify-content: space-between;
-    position: relative;
     top:20%;
 }
+.estadisticas{
+    padding: 12px 12px;
+    float: right;
+    border: 5px solid black ;
+    border-radius: 10px;
+    background-color: #EAF205;
+    font-family: 'Press Start 2P', cursive;
+    
+}
+.estadisticas:hover{
+    transform: translateX(20px);
+    transition: 0.5s;
+}
+.mainAzul p{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    margin-top: 20px;
+}
+.mainAzul img{
+    width: 100px;
+    height: 100px;
+    margin-top: 15px;
+    border: 1px solid #EAF205 ;
+    border-radius: 50px;
+    background-color: #EAF205;
+}
 footer{
+    padding-top: 15px;
+    box-sizing: border-box;
     width: 100%;
     height: 38px;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    margin-top: 100vmax;
     background: rgba(38, 130, 136, 0.86);
 }
 footer p{
@@ -198,9 +204,8 @@ footer p{
     text-align: center;
     color: #FFFFFF;
     font-size: 12px;
-    line-height: 12px;
-    margin-top: 15px;
 }
+
 @media screen and (max-width: 414px){
     header{
         width: 100%;
@@ -221,8 +226,6 @@ footer p{
     main{
         width: 314px;
         height: 396px;
-        margin-left:-20%;
-        top:290px;
         background: rgba(10, 21, 114, 0.72);
         border-radius: 66px;
     }
@@ -233,7 +236,6 @@ footer p{
         font-size: 12px;
         color: #FFFFFF;
         text-align: center;
-        margin-top: 140px;
     }
     body main #bienvenido img{
         width: 233px;
@@ -265,7 +267,6 @@ footer p{
     header nav #menu{
         width: 137px;
         height: 131px;
-        position: relative;
         margin-left: 32%;
         top: 120px;
     }
@@ -319,26 +320,22 @@ footer p{
         border-radius: 50px;
         background-color: #F2A81D;
         height: 60px;
-        position: relative;
         top: 10%;
         left: 0%;
     }
     .card-pokemon .numPokemon{
-      position: relative;
         top: 13px;
         right: 0px;
         font-size: 10px;
         font-family: 'Press Start 2P', cursive;
     }
     .card-pokemon .namePokemon{
-        position: absolute;
         top:80px;
         left: 0px;
         font-size: 8px;
         font-family: 'Press Start 2P', cursive;
     }
     .card-pokemon .aboutPokemon{
-        position: relative;
         top: 8px;
         font-family: Prompt;
         font-size: 10px;
@@ -357,7 +354,6 @@ footer p{
         align-items: center;
         display: flex;
         justify-content: space-between;
-        position: relative;
         top: 7%;
         border-bottom: 0.5px solid black;;
     }
@@ -370,7 +366,6 @@ footer p{
         line-height: 15px;
         align-items: center;
         display: inline;
-        position: relative;
         top: 4%;
     }
     .pre-evolution,.evolution,.special-attack {
@@ -380,7 +375,6 @@ footer p{
         line-height: 8px;
         display: inline-block;
         justify-content: space-between;
-        position: relative;
         top:7%;
     }
     footer{
