@@ -5,12 +5,22 @@
     margin: 0;
     border: 0;
 }
+header nav{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+
 header nav #menu{
     width: 137px;
     height: 131px;
     left: calc(50% - 137px/2 - 410.5px);
     top: 214px;
     z-index: 5;
+   
 }
 .nuevoFondo{
     width: 100%;
@@ -53,6 +63,21 @@ body main #infoBienvenida h3{
     margin-left: 19%;
 }
 main{
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    width: 1100px;
+    height: 500px;
+    left: calc(50% - 1103px/2 - 0.5px);
+    top: 95px;
+    text-align: center;
+    background: rgba(68, 213, 222, 0.72);
+    border-radius: 66px;
+    
+
+    
+}
+.main{
     position: absolute;
     top: 10%;
     left: 30%;
@@ -189,10 +214,9 @@ footer p{
     padding: 5px;
     margin: 10px;
     align-items: center;
-    display: inline;
-    justify-content:space-around;
-    position: relative;
-    top: 15%;
+    display:table-row;
+    
+    
     
 
 }
@@ -204,9 +228,35 @@ footer p{
     justify-content: space-between;
     position: relative;
     top:20%;
-    
-    
 } 
+
+.img-estadistica{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    
+}
+.info-estadistica {
+    font-size: 20px;
+    
+}
+.calculo{
+    font-size: 15px;
+    font-weight: bolder;
+    color: red;
+    padding: auto;
+
+}
+nav p{
+    padding: 15px;
+    color: red;
+    transition: 0.5s;
+}
+nav p:hover{
+    color: yellow;
+    transform: translateY(20px);
+}
+
 
 /*@media screen and (max-width: 380px){
     header{

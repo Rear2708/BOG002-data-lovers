@@ -1,4 +1,4 @@
-import { filterType, upperCase, listType, ordered } from '../src/data.js';
+import { filterType, upperCase, listType, ordered, ordenArrayObjetos} from '../src/data.js';
 
 
 describe('realiza un filtro de cada tipo de pokemon creando un set de 17 tipos en total', () => {
@@ -70,6 +70,45 @@ describe('ordenar alfabeticamente', () => {
     const ordenados = ['bug','dark','fire']
 
     expect(ordered(todosJuntos)).toEqual(ordenados);
+  });
+
+})
+describe('ordenar por nombre de manera ascendente un array de objetos', () => {
+  it('is a function', () => {
+    expect(typeof ordenArrayObjetos).toBe('function');
+  });
+
+  it('array ordenado', () => {
+    const Pokemon = [{
+      name: "ponyta",
+      type: ["fire"]
+    },
+    {
+      name: "metapod",
+      type: ["bug"]
+
+    },
+    {
+      name: "donphan",
+      type: ["ground"]
+
+    }]
+    const arrayOrdenado = [{
+        name: "donphan",
+        type: ["ground"]
+      },
+      {
+        name: "metapod",
+        type: ["bug"]
+  
+      },
+      {
+        name: "ponyta",
+        type: ["fire"]
+  
+      }]
+
+    expect(ordenArrayObjetos(Pokemon)).toEqual(arrayOrdenado);
   });
 
 })
