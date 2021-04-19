@@ -28,5 +28,12 @@ Este desarrollo esta dirigido a todo tipo de publico, que quiera aprender sobre 
 
 https://www.figma.com/file/XOkhphWSkT9dQU0Ke0AIS6/Untitled?node-id=0%3A1
 
-## Diseño final
+## Diseño final desktop
 
+<div style="text-align:center"><img width=60% height=40% src="../images/home.png"/></div>
+<div style="text-align:center"><img width=60% height=40% src="../images/menu.png"/></div>
+<div style="text-align:center"><img width=60% height=40% src="../images/estadisticas.png"/></div>
+<div style="text-align:center"><img width=60% height=40% src="../images/frontCard.png"/></div>
+<div style="text-align:center"><img width=60% height=40% src="../images/backCard.png"/></div>
+
+## Diseño final mobile
